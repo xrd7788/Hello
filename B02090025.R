@@ -8,33 +8,33 @@ plot(y,z)
 
 demo(graphics)
 
-#---»ğ§Àªá---
+#--------
 
 data(iris);
 plot(iris);
 
-#---»ğ§Àªá---
+#------
 
-#---¶e¤Y¦a¹Ï---
+#------
 
-install.packages('ggmap') #¦w¸Ë«ü¥O
+install.packages('ggmap') #å®‰è£æŒ‡ä»¤
 
 library(ggmap) 
 map.taiwan<-get_map(location = "Taiwan",zoom=8)
 ggmap(map.taiwan)
 
-#¦w¸Ë®M¥ó
+#å®‰è£å¥—ä»¶
 install.packages("C50")   
-#¸ü¤J®M¥ó
+#è¼‰å…¥å¥—ä»¶
 library(c50)
-#²¾°£®M¥ó
+#ç§»é™¤å¥—ä»¶
 remove.packages("C50")
-#§ó·s®M¥ó
+#æ›´æ–°å¥—ä»¶
 update.packages("C50") 
 
-#---¶e¤Y¦a¹Ï---
+#---é€®ä¸¸åœ°åœ–---
 
-#---¼Æ¾Ç½m²ß---
+#---æ•¸å­¸ç·´ç¿’---
 
 x<-10
 
@@ -42,9 +42,9 @@ y<-x^2
 
 z<-sqrt(y)
 
-#---¼Æ¾Ç½m²ß---
+#---æ•¸å­¸ç·´ç¿’---
 
-#---«¬ºA½m²ß---
+#---å‹æ…‹ç·´ç¿’---
 x1 <- 10
 mode(x1)
 length(x1)
@@ -100,7 +100,7 @@ xc
 xr<-rbind(x1,x2,x3)
 xr
 
-#Âà¸m(Transposition)
+#è½‰ç½®(Transposition)
 xc_t<-t(xc)
 xc_t
 
@@ -113,7 +113,7 @@ eigen(xc)
 z<-xc %*% xr
 z
 
-#Array(°}¦C)
+#Array(é™£åˆ—)
 x<-1:24
 dim(x)<-c(4,6)
 x
@@ -125,11 +125,11 @@ x[3,1,2]
 x<-array(0,dim=c(4,6))
 x
 
-#Factor(¦]¤l)
-x<- factor(c("¨k","¤k","¨k","¨k","¤k"))
+#Factor(å› å­)
+x<- factor(c("ç”·","å¥³","ç”·","ç”·","å¥³"))
 x
 
-#dataframe(¸ê®Æ®Ø¬[)
+#dataframe(è³‡æ–™æ¡†æ¶)
 id<- c(1,2,3,4)
 age<- c(25,30,35,40)
 sex<- c("Male","Male","Female","Female")
@@ -144,17 +144,17 @@ x_dataframe[2]
 x_dataframe$age
 edit(x_dataframe)
 
-#list(¦Cªí)
+#list(åˆ—è¡¨)
 id<- c(1,2,3)
 sex<- c("Male","Male","Female")
 pay<- c(30000,40000,50000)
 y_dataframe <-data.frame(id,sex,pay)
-gender <- factor(c("¨k","¨k","¤k"))
+gender <- factor(c("ç”·","ç”·","å¥³"))
 Paul.Family <-list(name="Paul",wife="Iris",
 no.kids=3,kids.age=c(25,28,30),gender,y_dataframe)
 Paul.Family
 
-#CH2 ¸ê®ÆÅª¨ú¼g¤J
+#CH2 è³‡æ–™è®€å–å¯«å…¥
 getwd()
 setwd("c:/")
 getwd()
@@ -164,14 +164,14 @@ x
 x$age
 x[1,2]
 
-x<-read.table("x.csv",sep=",",header=FALSE) #¿ùªº
+x<-read.table("x.csv",sep=",",header=FALSE) #éŒ¯çš„
 x
 str(x)
 
 x <- read.csv("x.csv",header = TRUE)
 x
 
-x <- read.table("x.txt",sep =" ",header = TRUE) #¿ùªº
+x <- read.table("x.txt",sep =" ",header = TRUE) #éŒ¯çš„
 x
 
 x <- read.table("x.txt",sep = "\t",header = TRUE)
@@ -202,7 +202,7 @@ x
 
 write.table(x,"c:/x_File1.csv",row.names=FALSE,col.names = TRUE,sep = ",")
 
-#data()¤º«Ø¸ê®Æ®w
+#data()å…§å»ºè³‡æ–™åº«
 data()
 
 data(iris)
@@ -214,16 +214,16 @@ save(iris,file="c:/iris.RData")
 load("c:/iris.RData",.GlobalEnv)
 iris
 
-#²Ä¤T³¹¬yµ{±±¨î
+#ç¬¬ä¸‰ç« æµç¨‹æ§åˆ¶
 a<- c(1,2,3)
 x<-a+2
 x
 
 
-#()ª½±µÅã¥Üµ²ªG
+#()ç›´æ¥é¡¯ç¤ºçµæœ
 (x<-a+2)
 
-#{}µ²¦X©R¥O
+#{}çµåˆå‘½ä»¤
 {a<-c(1,2,3);x<-a+2}
 x
 ({a<-c(1,2,3);x<-a+2})
@@ -283,7 +283,7 @@ repeat{
 }
 sum
 
-# %% ¾l¼Æ %/% °Ó 
+# %% é¤˜æ•¸ %/% å•† 
 
 sum<-0
 for(i in 1:50){
@@ -297,7 +297,7 @@ x<-array(1:24,dim=c(4,6))
 x
 apply(x, 1, sum)
 
-#¦Û­q¨ç¼Æ
+#è‡ªè¨‚å‡½æ•¸
 myfun<-function(x){y<-x+2;return(y)}
 myfun(1)
 myfun(100)
@@ -307,7 +307,7 @@ myfun<-function(x=1){y<-x+2;return(y)}
 myfun(50)
 myfun()
 
-# <<- §ïÅÜ¨ç¼Æ¥~­±ªº­È
+# <<- æ”¹è®Šå‡½æ•¸å¤–é¢çš„å€¼
 x<-1
 myfun<-function(x){x<-2;print(x)}
 myfun(x)
@@ -318,7 +318,7 @@ myfun<-function(x){x<<-2;print(x)}
 myfun(x)
 x
 
-#factorial ¶¥­¼
+#factorial éšä¹˜
 x<-1
 for(i in 1:5){x<-x*i}
 x
@@ -332,20 +332,20 @@ factorial(5)
 factorial(10)
 
 
-#²Ä¥|³¹
+#ç¬¬å››ç« 
 demo(graphics)
 demo(image)
 
 
-#°ª¶¥Ã¸¹Ï
+#é«˜éšç¹ªåœ–
 y<-sin(1:20)
 plot(y,type="l",main="Sin plot",xlab="X",ylab="Y")
 
-#§C¶¥Ã¸¹Ï
-title(sub="¹Ï4-2")
+#ä½éšç¹ªåœ–
+title(sub="åœ–4-2")
 points(5,0.5)
 
-#¤¬°Ê¦¡Ã¸¹Ï
+#äº’å‹•å¼ç¹ªåœ–
 plot(2,2)
 pts<-locator(n=3)
 pts
